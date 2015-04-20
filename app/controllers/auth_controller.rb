@@ -1,9 +1,6 @@
 class AuthController < ApplicationController
-  
-  layout false
-
+  layout "application"
   def index
-  	render('register')
   end
 
   def register

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # get 'auth/index'
-  # root 'auth#index'
+  root 'auth#index'
   match ':controller(/:action(/:id))', :via => :get
 
 

@@ -3,12 +3,12 @@
 <head>
   <title>Survey</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= requirejs_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= javascript_include_tag "application" %>
+	<%= yield :javascript_includes %>
 </head>
 <body>
-<h1>zaza</h1>
 <%= yield %>
-
 </body>
 </html>
