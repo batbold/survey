@@ -15,6 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
+gem "omniauth-google-oauth2"
 gem 'jquery-rails'
 gem 'requirejs-rails'
 gem "rails-backbone"

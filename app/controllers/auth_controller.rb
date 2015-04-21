@@ -1,8 +1,25 @@
 class AuthController < ApplicationController
-  layout "application"
+  layout :resolve_layout
+  private
+
+  def resolve_layout
+    case action_name
+    when "index", "register"
+      "application"
+    when "login"
+      "login"
+    else
+      "application"
+    end
+  end
+
   def index
   end
 
   def register
+  end
+
+  def login
+  	layout "login"
   end
 end
