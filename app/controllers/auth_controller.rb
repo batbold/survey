@@ -20,6 +20,5 @@ class AuthController < ApplicationController
   end
 
   def login
-  	layout "login"
   end
 end

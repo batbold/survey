@@ -37,6 +37,11 @@
     <![endif]-->
   </head>
   <body class="skin-blue sidebar-mini">
+  <% if !current_user %>
+        <script type="text/javascript">
+          window.location.href="/auth/login"
+        </script>
+      <% end %>
     <div class="wrapper">
       <header class="main-header">
         <!-- Logo -->
@@ -298,7 +303,7 @@
               <img src="/assets/user2-160x160.jpg" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
-              <p>Alexander Pierce</p>
+              <p><%= current_user.name %></p>
 
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
@@ -583,7 +588,7 @@
                     <p class="message">
                       <a href="#" class="name">
                         <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
-                        Alexander Pierce
+                        <%= current_user.name %>
                       </a>
                       I would like to meet you to discuss the latest news about
                       the arrival of the new theme. They say it is going to be one the
