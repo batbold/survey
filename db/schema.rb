@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 20150421053921) do
     t.string   "provider",         limit: 255
     t.string   "uid",              limit: 255
     t.string   "name",             limit: 255
+    t.string   "image",             limit: 255
+    t.string   "email",             limit: 255
     t.string   "oauth_token",      limit: 255
     t.datetime "oauth_expires_at"
     t.datetime "created_at",                   null: false
