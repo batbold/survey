@@ -1,2 +1,57 @@
-<h1>Home#show</h1>
-<p>Find me in app/views/home/show.html.erb</p>
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            Simple Tables
+            <small>preview of simple tables</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Tables</a></li>
+            <li class="active">Simple</li>
+          </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">          
+            <div id="grid"></div>
+        </section><!-- /.content -->
+
+        <% content_for :javascript_includes do %>
+  <%= javascript_include_tag "home.js" %>
+<% end %>
+            <script>
+                $(document).ready(function () {
+                    $("#grid").kendoGrid({
+                        dataSource: {
+                            type: "odata",
+                            transport: {
+                                read: "http://demos.telerik.com/kendo-ui/service/Northwind.svc/Customers"
+                            },
+                            pageSize: 20
+                        },
+                        height: 550,
+                        groupable: true,
+                        selectable: true,
+                        sortable: true,
+                        pageable: {
+                            refresh: true,
+                            pageSizes: true,
+                            buttonCount: 5
+                        },
+                        columns: [{
+                            field: "ContactName",
+                            title: "Contact Name",
+                            width: 200
+                        }, {
+                            field: "ContactTitle",
+                            title: "Contact Title"
+                        }, {
+                            field: "CompanyName",
+                            title: "Company Name"
+                        }, {
+                            field: "Country",
+                            width: 150
+                        }]
+                    });
+                });
+            </script>

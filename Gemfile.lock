@@ -75,6 +75,8 @@ GEM
       railties (>= 3.2.16)
     json (1.8.2)
     jwt (1.4.1)
+    kendoui-rails (0.1.1)
+      jquery-rails
     loofah (2.0.1)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -82,6 +84,8 @@ GEM
     mime-types (2.4.3)
     mini_portile (0.6.2)
     minitest (5.6.0)
+    morrisjs-rails (0.5.1)
+      railties (> 3.1, < 5)
     multi_json (1.11.0)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -140,6 +144,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
+    raphael-rails (2.1.2)
     rdoc (4.2.0)
       json (~> 1.4)
     requirejs-rails (0.9.5)
@@ -188,12 +193,15 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails
+  kendoui-rails
+  morrisjs-rails
   mysql2
   omniauth
   omniauth-facebook
   omniauth-google-oauth2
   rails (= 4.2.1)
   rails-backbone
+  raphael-rails
   requirejs-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
